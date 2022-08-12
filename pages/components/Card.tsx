@@ -8,23 +8,29 @@ interface results {
 }
 
 interface CardProps {
-    results?: results[]
+    results: results[]
 }
 
 const Card: React.FC<CardProps> = (props) => {
 
-    return (
-        <div  className={styles.card}>
-            <img className={styles.logo} src={props.results.logo}/>
-            <h3>{props.results.name}</h3>
-            {props.results.unitname1? 
+   
+//   results = props.results
+const result: results = props.results
+
+
+
+return (
+    <div className={styles.card}>
+        <img className={styles.logo} src={result.logo} />
+        <h3>{result.name}</h3>
+        {result.available ?
             // "one": "two"
             <button className={styles.available}>Available</button>
-            :<button className={styles.unavailable}>Unavailable</button>
-            }
+            : <button className={styles.unavailable}>Unavailable</button>
+        }
 
-        </div>
-    )
+    </div>
+)
 }
 
 
