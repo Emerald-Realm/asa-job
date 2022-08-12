@@ -7,7 +7,7 @@ import styles from '../styles/Home.module.css'
 import Card from './components/Card'
 import headerLogo from '../public/headerlogo.png'
 
-export default function Home(results) {
+export default function Home(results: any) {
   const intialState = results.asalist;
   // const [asalist, setAsalist] = useState(intialState.asalist)
   console.log(intialState[1])
@@ -34,7 +34,7 @@ export default function Home(results) {
 
 
         <div className={styles.collection}>
-          {intialState.map((results) =>
+          {intialState.map((results: any) =>
             <Card key={results.assetId} results={results} />
           )}
         </div>
