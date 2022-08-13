@@ -1,4 +1,7 @@
-import styles from '../../styles/Home.module.css'
+// import styles from '../../styles/Home.module.css'
+// import styles from 'styles/Home.module.css'
+// import styles from './styles/'
+import styles from '../styles/Home.module.css'
 
 type results = {
     logo: string
